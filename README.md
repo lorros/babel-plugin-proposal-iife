@@ -3,7 +3,20 @@ Immediately invoked function expressions (IIFE) syntax proposal for JS (Babel im
 
 To use, add it to .babelrc / babel.config.js, plugins section. No configuration needed.
 
+TL;DR:
+
+You can use this:
+
+    (x = fn1()) :> calc(x, x + 1)
+
+instead of:
+
+    ((x => calc(x, x + 1))(fn1())
+
+That's it. Now for the details...
+
 The problem:
+
 IIFEs are commonplace when you want to save the results of some calculation within an expression.
 E.g.
 
@@ -50,11 +63,13 @@ If you just want to declare a variable, that's also possible:
 Relation to other language features:
 
 * let, const:
+
 Let and const operate on block level. IIFE operates on expression level. Furthermore, let and const
 require you to extend the visibility of the variables being declared till the end of the block; the
 scope of IIFE variables are only till the end of the expression.
 
-* do { expr; } proposal
+* do { expr; } proposal:
+
 Do-expressions proposal serve a similar purpose and try to solve the same problem by let and const.
 It also aims at being able to write if-statement instead of ternary operators; whether that's an
 advantage depends heavily on one's coding style. The caveats shown in let & const appear when one's
@@ -62,7 +77,8 @@ using do-expressions; furthermore, it opens a much larger set of what-if issues 
 and return appearing in expressions), while IIFE syntax sugar helps you to focus on this and only
 this issue.
 
-* pipeline operator proposal
+* pipeline operator proposal:
+
 Pipeline operator calls a function with one parameter; IIFE syntax calls one with zero unbound /
 non-defaulted parameters. Therefore, these syntaxes are similar. In fact, you might write:
 
