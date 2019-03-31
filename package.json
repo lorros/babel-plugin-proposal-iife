@@ -1,0 +1,29 @@
+{
+  "name": "babel-plugin-proposal-iife",
+  "version": "1.0.0",
+  "description": "Immediately invoked function expressions (IIFE) syntax sugar.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorros/babel-plugin-proposal-iife.git"
+  },
+  "author": "Lorand Szollosi (lorro)",
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.0.0",
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/helper-plugin-test-runner": "^7.0.0"
+  },
+  "keywords": [
+    "babel-plugin"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lorros/babel-plugin-proposal-iife/issues"
+  },
+  "homepage": "https://github.com/lorros/babel-plugin-proposal-iife#readme"
+}
